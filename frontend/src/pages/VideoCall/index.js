@@ -1,35 +1,46 @@
-import { inject, observer } from 'mobx-react'
-import styled, { injectGlobal } from 'styled-components'
-import { Col, Row } from '../../components/index'
-import CallControls from './CallControls'
+import {inject, observer} from 'mobx-react'
+import styled, {injectGlobal} from 'styled-components'
+import {Col, Row} from '../../components/index'
 import Overlay from './Overlay'
 
 @inject('store') @observer
 export default class VideoCall extends Component {
 
-	componentDidMount () {
-		const { videoCall } = store
+	componentDidMount() {
+		const {videoCall} = store
 		if (videoCall.session_id != null && videoCall.token != null) {
 			videoCall.connect(this._partner, this._video)
 		}
 	}
 
-	componentDidUpdate () {
+	componentDidUpdate() {
 
 	}
 
-	render () {
+	render() {
 		return (
 			<Container>
 				<CallContainer>
-					<StyledRow centered>
-						<VideoCol>
-							<Video id="userVid" innerRef={r => this._video = r}/>
-						</VideoCol>
-						<VideoCol>
-							<Video id="partnerVid" innerRef={r => this._partner = r}/>
-						</VideoCol>
-					</StyledRow>
+					{this.props.store.user.info.match.right ?
+						<StyledRow centered>
+							<VideoCol>
+								<Video id="userVid" innerRef={r => this._video = r}/>
+							</VideoCol>
+							<VideoCol>
+								<Video id="partnerVid" innerRef={r => this._partner = r}/>
+							</VideoCol>
+						</StyledRow>
+						:
+						<StyledRow centered>
+							<VideoCol>
+								<Video id="partnerVid" innerRef={r => this._partner = r}/>
+							</VideoCol>
+							<VideoCol>
+								<Video id="userVid" innerRef={r => this._video = r}/>
+							</VideoCol>
+						</StyledRow>
+
+					}
 				</CallContainer>
 				<StyledOverlay/>
 			</Container>

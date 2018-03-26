@@ -67,12 +67,12 @@ export default class Overlay extends Component {
 	render() {
 		return (
 			<CallCol>
-				<Row centered>
+				<AnimHolder centered>
 					<div ref={(c) => {
 						this.el = c
 					}}
 					/>
-				</Row>
+				</AnimHolder>
 				<Row centered>
 					<div className="button-container">
 						<button autoFocus={true} className="button-control" onClick={this.handleClick}>
@@ -92,4 +92,8 @@ export default class Overlay extends Component {
 const CallCol = styled(Col)`
 	position: absolute;
 	top: -108px;
+`
+
+const AnimHolder = styled(Row)`
+	margin-bottom: -8px;
 `
