@@ -75,7 +75,7 @@ export default class Overlay extends Component {
 				</Row>
 				<Row centered>
 					<div className="button-container">
-						<button className="button-control" onClick={this.handleClick}>
+						<button autoFocus={true} className="button-control" onClick={this.handleClick}>
 							<img src="assets/images/base.svg" alt="" className="button-base"
 							     width="512" height="230"/>
 							<div className="button-shadow"></div>
