@@ -1,0 +1,78 @@
+/* line 2, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  background: slategray;
+  width: 100%;
+}
+
+/* line 10, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-shadow {
+  position: absolute;
+  left: 98px;
+  bottom: 52px;
+  z-index: 2;
+  transition: all 80ms ease-in-out;
+  opacity: 0.24;
+  filter: blur(16px);
+  width: 316px;
+  height: 128px;
+  background: black;
+  border-radius: 154px / 64px;
+}
+
+/* line 24, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-base {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 31, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-top {
+  transition: all 80ms ease-in-out;
+  position: absolute;
+  z-index: 3;
+  left: 96px;
+  top: 0;
+  transform: scale(1.04);
+}
+
+/* line 40, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-control {
+  background: transparent;
+  position: relative;
+  width: 512px;
+  height: 360px;
+  margin: auto;
+  margin-top: -128px;
+  border: 0;
+  outline: none;
+  transform: scale(0.67);
+}
+
+/* line 50, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-control:hover {
+  cursor: pointer;
+}
+
+/* line 53, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-control:focus {
+  outline: none;
+}
+
+/* line 57, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-control:active .button-shadow {
+  opacity: 0.38;
+  filter: blur(4px);
+}
+
+/* line 61, /Volumes/DATA/work/reactathon-hackathon/frontend/src/sass/app.scss */
+.button-control:active .button-top {
+  transform: translateY(80px) scale(1);
+}
+
+/*# sourceMappingURL=../../www/assets/stylesheets/app.map */

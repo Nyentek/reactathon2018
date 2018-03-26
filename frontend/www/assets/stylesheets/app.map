@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../src/sass/app.css",
+	"sources": [
+		"../../../src/sass/app.scss"
+	],
+	"sourcesContent": [
+		"$default-transition: all 80ms ease-in-out;\n.button-container {\n\tdisplay: flex;\n\tflex-flow: row nowrap;\n\tjustify-content: center;\n\talign-items: flex-end;\n\tbackground: slategray;\n\twidth: 100%;\n}\n.button-shadow {\n\tposition: absolute;\n\tleft: 98px;\n\tbottom: 52px;\n\tz-index: 2;\n\ttransition: $default-transition;\n\topacity: 0.24;\n\tfilter: blur(16px);\n\twidth: 316px;\n\theight: 128px;\n\tbackground: black;\n\tborder-radius: 154px / 64px;\n}\n\n.button-base {\n\tposition: absolute;\n\tz-index: 1;\n\tleft: 0;\n\tbottom: 0;\n}\n\n.button-top {\n\ttransition: $default-transition;\n\tposition: absolute;\n\tz-index: 3;\n\tleft: 96px;\n\ttop: 0;\n\ttransform: scale(1.04);\n}\n\n.button-control {\n\tbackground: transparent;\n\tposition: relative;\n\twidth: 512px;\n\theight: 360px;\n\tmargin: auto;\n\tmargin-top: -128px;\n\tborder: 0;\n\toutline: none;\n\ttransform: scale(0.67);\n\t&:hover {\n\t\tcursor: pointer;\n\t}\n\t&:focus {\n\t\toutline: none;\n\t}\n\t&:active {\n\t\t.button-shadow {\n\t\t\topacity: 0.38;\n\t\t\tfilter: blur(4px);\n\t\t}\n\t\t.button-top {\n\t\t\ttransform: translateY(80px) scale(1);\n\t\t}\n\t}\n}"
+	],
+	"mappings": ";AACA,AAAA,iBAAiB,CAAC;EACjB,OAAO,EAAE,IAAK;EACd,SAAS,EAAE,UAAW;EACtB,eAAe,EAAE,MAAO;EACxB,WAAW,EAAE,QAAS;EACtB,UAAU,EAAE,SAAU;EACtB,KAAK,EAAE,IAAK;CACZ;;;AACD,AAAA,cAAc,CAAC;EACd,QAAQ,EAAE,QAAS;EACnB,IAAI,EAAE,IAAK;EACX,MAAM,EAAE,IAAK;EACb,OAAO,EAAE,CAAE;EACX,UAAU,EAdU,GAAG,CAAC,IAAI,CAAC,WAAW;EAexC,OAAO,EAAE,IAAK;EACd,MAAM,EAAE,UAAI;EACZ,KAAK,EAAE,KAAM;EACb,MAAM,EAAE,KAAM;EACd,UAAU,EAAE,KAAM;EAClB,aAAa,EAAE,YAAa;CAC5B;;;AAED,AAAA,YAAY,CAAC;EACZ,QAAQ,EAAE,QAAS;EACnB,OAAO,EAAE,CAAE;EACX,IAAI,EAAE,CAAE;EACR,MAAM,EAAE,CAAE;CACV;;;AAED,AAAA,WAAW,CAAC;EACX,UAAU,EA/BU,GAAG,CAAC,IAAI,CAAC,WAAW;EAgCxC,QAAQ,EAAE,QAAS;EACnB,OAAO,EAAE,CAAE;EACX,IAAI,EAAE,IAAK;EACX,GAAG,EAAE,CAAE;EACP,SAAS,EAAE,WAAK;CAChB;;;AAED,AAAA,eAAe,CAAC;EACf,UAAU,EAAE,WAAY;EACxB,QAAQ,EAAE,QAAS;EACnB,KAAK,EAAE,KAAM;EACb,MAAM,EAAE,KAAM;EACd,MAAM,EAAE,IAAK;EACb,UAAU,EAAE,MAAO;EACnB,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,IAAK;EACd,SAAS,EAAE,WAAK;CAgBhB;;;AAzBD,AAAA,eAAe,AAUb,MAAM,CAAC;EACP,MAAM,EAAE,OAAQ;CAChB;;;AAZF,AAAA,eAAe,AAab,MAAM,CAAC;EACP,OAAO,EAAE,IAAK;CACd;;;AAfF,AAiBE,eAjBa,AAgBb,OAAO,CACP,cAAc,CAAC;EACd,OAAO,EAAE,IAAK;EACd,MAAM,EAAE,SAAI;CACZ;;;AApBH,AAqBE,eArBa,AAgBb,OAAO,CAKP,WAAW,CAAC;EACX,SAAS,EAAE,gBAAU,CAAO,QAAK;CACjC",
+	"names": []
+}
